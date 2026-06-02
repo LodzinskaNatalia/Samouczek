@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podstawy</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            background-color: #faebd7;
+            width: 100%;
+            height: 100%;
+            min-height: 100vh;
+        }
+
+        header{
+            position: relative;
+            display: flex;
+            background-color: #FAD88E;
+            font-size: 150%;
+            padding: 2.5%;
+            box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.418);
+            border-bottom-right-radius: 5%;
+            border-bottom-left-radius: 5%;
+            margin-bottom: 2%;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        h1{
+            position: relative;
+            animation: h1 3s;
+        }
+        @keyframes h1{
+            from{
+                right: 40%;
+                opacity: 0;
+            }
+            to{
+                right: 0;
+                opacity: 1;
+            }
+        }
+        .img{
+            display: flex;
+            justify-content: center;
+        }
+        
+        dt, h2{
+            font-size: 200%;
+            font-weight: bold;
+            margin: 2%;
+        }
+        dd{
+            font-size: 150%;
+            margin: 2%;
+        }
+        li{
+            margin-left: 2%;
+            font-size: 125%;
+            margin-bottom: 1%;
+            
+        }
+        pre{
+            font-size: 150%;
+            background-color: lightgray;            
+            margin: 2%;            
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.418);
+        }
+        main{
+            flex: 1;
+        }
+        footer{
+            
+            background-color: #FAD88E;
+            padding: 0.5%;
+            box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.418);
+            border-top-left-radius: 10%;
+            border-top-right-radius: 10%;
+            text-align: center;
+            width: 100%;
+          
+        }
+        header img{
+            position: absolute;
+            left: 2%;
+            top: 50%;
+            transform: translateY(-50%)
+            
+        }
+        @media screen and (max-width: 780px) {
+            header a{
+                display: none;
+            }
+            pre{
+                overflow: auto; 
+            }
+            img{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="img/Domek.png"></a>
+        <h1>Podstawowe reguły</h1>
+    </header>
+    <main>
+        <dl>
+            <dt>
+                color
+            </dt>
+            <dd>
+                Służy do zmiany koloru. Kolor można podać w wolnym systemie np. rgb, szesnastkowym lub wpisując jego nazwę.
+            </dd>
+        </dl>
+        
+        <h2>Kod</h2>
+        <pre>
+        <code>
+        color: yellow;</code>
+        </pre>  
+    <hr>
+    <dl>
+        <dt>
+            background-color
+        </dt>
+        <dd>
+            Służy do zmiany koloru tła. Kolor można podać w wolnym systemie np. rgb, szesnastkowym lub wpisując jego nazwę.</dd>
+        </dl>
+        
+        <h2>Kod</h2>
+        <pre>
+        <code>
+        background-color: rgb(0,255,255);</code>
+        </pre>
+    <hr>
+    <dl>
+        <dt>
+            margin
+        </dt>
+        <dd>
+            Tworzy marginesy zewnętrzne. Można zrobić margines tylko po jednej stronie za pomocą "margin-left", "margin-bottom", "margin-top" i "margin-right".</dd>
+        </dl>
+        
+        <h2>Kod</h2>
+        <pre>
+        <code>
+        margin: 2%;</code>
+        </pre>
+        <hr>
+        <dl>
+            <dt>
+                padding
+            </dt>
+            <dd>
+                Tworzy marginesy wewnętrzne. Można zrobić margines wewnętrznny tylko po jednej stronie za pomocą "padding-left", "padding-bottom", "padding-top" i "padding-right".</dd>
+        </dl>
+
+        <h2>Kod</h2>
+        <pre>
+        <code>
+        padding: 2%;</code>
+        </pre>
+        
+    </main>
+    <footer>
+        <p>Autor strony: Natalia Lodzińska</p>
+    </footer>
+    
+</body>
+</html>

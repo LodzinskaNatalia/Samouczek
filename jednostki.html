@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jednostki</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            background-color: antiquewhite;
+            width: 100%;
+
+        }
+
+        header{
+            position: relative;
+            display: flex;
+            background-color: #FAD88E;
+            font-size: 150%;
+            padding: 2.5%;
+            box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.418);
+            border-bottom-right-radius: 5%;
+            border-bottom-left-radius: 5%;
+            margin-bottom: 2%;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        h1{
+            position: relative;
+            animation: h1 3s;
+        }
+        @keyframes h1{
+            from{
+                right: 40%;
+                opacity: 0;
+            }
+            to{
+                right: 0;
+                opacity: 1;
+            }
+        }
+        img{
+            position: relative;      
+           
+        }
+        .img{
+            display: flex;
+            justify-content: center;
+            margin: 2%;
+        }
+        
+        dt, h2{
+            font-size: 200%;
+            font-weight: bold;
+            margin: 2%;
+        }
+        dd, ol{
+            font-size: 150%;
+            margin: 2%;
+        }
+        li{
+            margin-left: 2%;
+            font-size: 125%;
+            margin-bottom: 1%;
+            
+        }
+        
+        pre{
+            font-size: 150%;
+            background-color: lightgray;            
+            margin: 2%;            
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.418);
+        }
+        main{
+            flex: 1;
+        }
+        footer{
+            
+            background-color: #FAD88E;
+            padding: 0.5%;
+            box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.418);
+            border-top-left-radius: 10%;
+            border-top-right-radius: 10%;
+            text-align: center;
+            width: 100%;
+          
+        }
+        header img{
+            position: absolute;
+            left: 2%;
+            top: 50%;
+            transform: translateY(-50%)
+            
+        }
+        table, th, tr, td{
+            border: 1px solid black;
+            text-align: center;
+            font-size: 120%;
+            
+        }
+        td{
+            padding: 1%;
+        }
+        th{
+            background-color: #FAD88E;
+        }
+        tr{
+            background-color: blanchedalmond;
+        }
+        .table{
+            display: flex;
+            justify-content: center;
+            padding: 2%;
+        }
+        @media screen and (max-width: 780px) {
+            header a{
+                display: none;
+            }
+            pre{
+                overflow: auto; 
+            }
+            img{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="img/Domek.png"></a>
+        <h1>Jednostki</h1>
+    </header>
+    <main>
+        <dl>
+            <dt>Jednostki</dt>
+            <dd>Jednostki są potrzebne w CSS, żeby ustawiać różne wielkości elementów. Istnieją jednostki względne i bezwzględne</dd>
+        </dl>
+        <hr>
+        <dl>
+            <dt>Jednostki bezwzględne</dt>
+            <dd>Stałe miary długości, niezależne od urządzenia.</dd>
+            
+        </dl>
+        <div class="table">
+        <table>
+            <tr><th>Jednostka</th><th>Opis</th></tr>
+            <tr><td>px</td><td>pixel, podstawowa jednostka, zależy od rozdzielczości ekranu</td></tr>
+            <tr><td>pt</td><td>punkty</td></tr>
+            <tr><td>pc</td><td>piki</td></tr>
+            <tr><td>in</td><td>cale</td></tr>
+            <tr><td>mm</td><td>milimetr</td></tr>
+            <tr><td>cm</td><td>centymetr</td></tr>
+        </table>
+        </div>
+        <hr>
+        <dl>
+            <dt>Jednostki względne</dt>
+            <dd>Różne miary w zależności od urządzenia.</dd>
+        </dl>
+        <div class="table">
+        <table>
+            <tr><th>Jednostka</th><th>Opis</th></tr>
+            <tr><td>em</td><td>wielokrotność</td></tr>
+            <tr><td>ex</td><td>w stosunku do wysokości x bieżącej czcionki. Jest rzadko używana</td></tr>
+            <tr><td>ch</td><td>w stosunku do szerokości „0”</td></tr>
+            <tr><td>rem</td><td>w stosunku do rozmiaru czcionki elementu głównego</td></tr>
+            <tr><td>vw</td><td>w stosunku do 1% szerokości rozmiaru okna przeglądarki</td></tr>
+            <tr><td>vh</td><td>w stosunku do 1% wysokości rozmiaru okna przeglądarki</td></tr>
+            <tr><td>vmin</td><td>w stosunku do 1% mniejszego wymiaru okna przeglądarki</td></tr>
+            <tr><td>vmax</td><td>w stosunku do 1% większego wymiaru okna przeglądarki</td></tr>
+            <tr><td>%</td><td>procent</td></tr>
+        </table>
+        </div>
+    </main>
+        <footer>
+        <p>Autor strony: Natalia Lodzińska</p>
+    </footer>
+</body>
+</html>

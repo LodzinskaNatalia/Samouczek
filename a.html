@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linki</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            background-color: #faebd7;
+            width: 100%;
+            height: 100%;
+            min-height: 100vh;
+        }
+
+        header{
+            position: relative;
+            display: flex;
+            background-color: #FAD88E;
+            font-size: 150%;
+            padding: 2.5%;
+            box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.418);
+            border-bottom-right-radius: 5%;
+            border-bottom-left-radius: 5%;
+            margin-bottom: 2%;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        h1{
+            position: relative;
+            animation: h1 3s;
+        }
+        @keyframes h1{
+            from{
+                right: 40%;
+                opacity: 0;
+            }
+            to{
+                right: 0;
+                opacity: 1;
+            }
+        }
+        
+        .img{
+            display: flex;
+            justify-content: center;
+            margin: 2%;
+        }
+        
+        dt, h2{
+            font-size: 200%;
+            font-weight: bold;
+            margin: 2%;
+        }
+        dd, ol{
+            font-size: 150%;
+            margin: 2%;
+        }
+        li{
+            margin-left: 2%;
+            font-size: 125%;
+            margin-bottom: 1%;
+            
+        }
+        
+        pre{
+            font-size: 150%;
+            background-color: lightgray;            
+            margin: 2%;            
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.418);
+            
+        }
+       
+       main{
+            flex: 1;
+        }
+        footer{
+            
+            background-color: #FAD88E;
+            padding: 0.5%;
+            box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.418);
+            border-top-left-radius: 10%;
+            border-top-right-radius: 10%;
+            text-align: center;
+            width: 100%;
+          
+        }
+        header img{
+            position: absolute;
+            left: 2%;
+            top: 50%;
+            transform: translateY(-50%)
+            
+        }
+        @media screen and (max-width: 780px) {
+            header a{
+                display: none;
+            }
+            pre{
+                overflow: auto; 
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html"><img src="img/Domek.png"></a>
+        <h1>Hiperłącza</h1>
+    </header>
+    <main>
+        <dl>
+            <dt>
+                a
+            </dt>
+            <dd>
+                To znacznik, który służy do zamieszczania hiperłączy ma stronie, które przenoszą do innych stron, lub podstron. Można go także używać do tworzenia kotwic.
+            </dd>
+        </dl>
+        <div class="img">
+            <a href="mapy.html">
+                Kliknij w link
+            </a>
+        </div>
+        <h2>Kod</h2>
+        <pre>
+        <code>
+        1 &lt;a href="img.html"&gt;
+        2   Kliknij w link
+        3 &lt;/a&gt;</code>
+        </pre> 
+        <h2>Jak to działa?</h2>
+        <ol>
+            <li>
+                Tworzymy link za pomocą znacznika &lt;a&gt;. W atrybucie "href" podajemy do jakiej strony ma nas przenosić.
+            </li>
+            <li>
+                Podajemy tekst, pod którym ma się wyświetlać link. Można dodać także zdjęcie.
+            </li>
+            <li>
+                Zamykamy znacznik &lt;a&gt;.
+            </li>
+        </ol>
+        <h2>Domyślny styl</h2>
+        <pre>
+        <code>
+        a:link, a:visited {
+            color: (internal value);
+            text-decoration: underline;
+            cursor: auto;
+        }
+        a:link:active, a:visited:active {
+          color: (internal value);
+        } 
+        </code>
+        </pre>
+    </main>
+    <footer>
+        <p>Autor strony: Natalia Lodzińska</p>
+    </footer>
+    
+</body>
+</html>

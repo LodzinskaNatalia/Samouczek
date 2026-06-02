@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selektory</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            background-color: antiquewhite;
+            width: 100%;
+            
+        }
+
+        header{
+            position: relative;
+            display: flex;
+            background-color: #FAD88E;
+            font-size: 150%;
+            padding: 2.5%;
+            box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.418);
+            border-bottom-right-radius: 5%;
+            border-bottom-left-radius: 5%;
+            margin-bottom: 2%;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        h1{
+            position: relative;
+            animation: h1 3s;
+        }
+        @keyframes h1{
+            from{
+                right: 40%;
+                opacity: 0;
+            }
+            to{
+                right: 0;
+                opacity: 1;
+            }
+        }
+        img{
+            position: relative;      
+           
+        }
+        .img{
+            display: flex;
+            justify-content: center;
+            margin: 2%;
+        }
+        
+        dt, h2{
+            font-size: 200%;
+            font-weight: bold;
+            margin: 2%;
+        }
+        dd, ol{
+            font-size: 150%;
+            margin: 2%;
+        }
+        li{
+            margin-left: 2%;
+            font-size: 125%;
+            margin-bottom: 1%;
+            
+        }
+        
+        pre{
+            font-size: 150%;
+            background-color: lightgray;            
+            margin: 2%;            
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.418);
+        }
+        main{
+            flex: 1;
+        }
+        footer{
+            
+            background-color: #FAD88E;
+            padding: 0.5%;
+            box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.418);
+            border-top-left-radius: 10%;
+            border-top-right-radius: 10%;
+            text-align: center;
+            width: 100%;
+          
+        }
+        header img{
+            position: absolute;
+            left: 2%;
+            top: 50%;
+            transform: translateY(-50%)
+            
+        }
+        table, th, tr, td{
+            border: 1px solid black;
+            text-align: center;
+            font-size: 120%;
+            
+        }
+        th{
+            background-color: #FAD88E;
+        }
+        tr{
+            background-color: blanchedalmond;
+        }
+        td{
+            padding: 1%;
+        }
+        .table{
+            display: flex;
+            justify-content: center;
+            padding: 2%;
+        }
+        @media screen and (max-width: 780px) {
+            header a{
+                display: none;
+            }
+            pre{
+                overflow: auto; 
+            }
+            img{
+                display: none;
+            }
+            table{
+                width: 10%;
+                font-size: small;
+            }
+        }
+    </style>
+</head>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="img/Domek.png"></a>
+        <h1>Formularze</h1>
+    </header>
+    <main>
+        
+        <dl>
+            <dt>
+                Formularz
+            </dt>
+            <dd>
+                To element strony, który pozwala użytkownikowi wprowadzać dane. Cały formularz musi znajdować się w znaczniku &lt;form&gt;. Można dodać też ramkę z tytułem, za pomocą &lt;fieldset&gt; i &lt;legrnd&gt;. Są różne typy pól w formularzu. Aby dodać tekst przed lub po polu należy użyć  &lt;label&gt;.
+            </dd>
+        </dl>
+        <h2>Typy pól formularza</h2>
+        <div class="table">
+        <table>
+            <tr>
+                <th>Nazwa</th><th>Opis</th><th>Kod</th>
+            </tr>
+            <tr><td>text</td><td>zwykłe pole tekstowe</td><td>&lt;input type="text"&gt;</td></tr>
+            <tr><td>password</td><td>pole do wpisania hasła (ukryte znaki)</td><td>&lt;input type="password"&gt;</td></tr>
+            <tr><td>email</td><td>wymaga poprawnego adresu e-mail</td><td>&lt;input type="email"&gt;</td></tr>
+            <tr><td>number</td><td>pole numeryczne</td><td>&lt;input type="number"&gt;</td></tr>
+            <tr><td>tel</td><td>pole na numer telefonu</td><td>&lt;input type="tel"&gt;</td></tr>
+            <tr><td>url</td><td>wymaga poprawnego adresu URL</td><td>&lt;input type="url"&gt;</td></tr>
+            <tr><td>search</td><td>pole wyszukiwania</td><td>&lt;input type="search"&gt;</td></tr>
+            <tr><td>checkbox</td><td>pole wyboru (wiele opcji)</td><td>&lt;input type="checkbox"&gt;</td></tr>
+            <tr><td>radio</td><td>pole wyboru jednej opcji</td><td>&lt;input type="radio"&gt;</td></tr>
+            <tr><td>range</td><td>suwak wartości</td><td>&lt;input type="range"&gt;</td></tr>
+            <tr><td>color</td><td>wybór koloru</td><td>&lt;input type="color"&gt;</td></tr>
+            <tr><td>date</td><td>wybór daty</td><td>&lt;input type="date"&gt;</td></tr>
+            <tr><td>time</td><td>wybór godziny</td><td>&lt;input type="time"&gt;</td></tr>
+            <tr><td>datetime-local</td><td>data i czas lokalny</td><td>&lt;input type="datetime-local"&gt;</td></tr>
+            <tr><td>month</td><td>wybór miesiąca</td><td>&lt;input type="month"&gt;</td></tr>
+            <tr><td>week</td><td>wybór tygodnia</td><td>&lt;input type="week"&gt;</td></tr>
+            <tr><td>file</td><td>wybór pliku</td><td>&lt;input type="file"&gt;</td></tr>
+            <tr><td>image</td><td>przycisk wysyłania w formie obrazka</td><td>&lt;input type="image" src="obrazek.png"&gt;</td></tr>
+            <tr><td>button</td><td>zwykły przycisk</td><td>&lt;input type="button" value="Kliknij"&gt;</td></tr>
+            <tr><td>submit</td><td>wysyła formularz</td><td>&lt;input type="submit" value="Wyślij"&gt;</td></tr>
+            <tr><td>reset</td><td>resetuje formularz</td><td>&lt;input type="reset" value="Reset"&gt;</td></tr>
+            <tr><td>hidden</td><td>ukryte pole do przechowywania danych</td><td>&lt;input type="hidden" value="123"&gt;</td></tr>
+            <tr><td>textarea</td><td>wielolinijkowe pole tekstowe</td><td>&lt;textarea&gt;&lt;/textarea&gt;</td></tr>
+            <tr><td>select</td><td>rozwijana lista opcji</td><td>&lt;select&gt;[&lt;optiongroup&gt;]&lt;option&gt;Opcja&lt;/option&gt;[&lt;/optiongroup&gt;]&lt;/select&gt;</td></tr>
+        </table>
+    </main>
+   <footer>
+        <p>Autor strony: Natalia Lodzińska</p>
+    </footer>
+</body>
+</html>

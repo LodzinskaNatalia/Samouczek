@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wyróżnienie tekstu</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            background-color: #faebd7;
+            width: 100%;
+            height: 100%;
+            min-height: 100vh;
+        }
+
+        header{
+            position: relative;
+            display: flex;
+            background-color: #FAD88E;
+            font-size: 150%;
+            padding: 2.5%;
+            box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.418);
+            border-bottom-right-radius: 5%;
+            border-bottom-left-radius: 5%;
+            margin-bottom: 2%;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        
+        h1{
+            position: relative;
+            animation: h1 3s;
+        }
+        @keyframes h1{
+            from{
+                right: 40%;
+                opacity: 0;
+            }
+            to{
+                right: 0;
+                opacity: 1;
+            }
+        }
+        .img{
+            display: flex;
+            justify-content: center;
+        }
+        
+        dt, h2{
+            font-size: 200%;
+            font-weight: bold;
+            margin: 2%;
+        }
+        dd{
+            font-size: 150%;
+            margin: 2%;
+        }
+        li{
+            margin-left: 2%;
+            font-size: 125%;
+            margin-bottom: 1%;
+            
+        }
+        pre{
+            font-size: 150%;
+            background-color: lightgray;            
+            margin: 2%;            
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.418);
+        }
+        main{
+            flex: 1;
+        }
+        footer{
+            
+            background-color: #FAD88E;
+            padding: 0.5%;
+            box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.418);
+            border-top-left-radius: 10%;
+            border-top-right-radius: 10%;
+            text-align: center;
+            width: 100%;
+          
+        }
+        header img{
+            position: absolute;
+            left: 2%;
+            top: 50%;
+            transform: translateY(-50%)
+            
+        }
+       @media screen and (max-width: 780px) {
+            header a{
+                display: none;
+            }
+            pre{
+                overflow: auto; 
+            }
+            img{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html"><img src="img/Domek.png"></a>
+        <h1>Wyróżnienie tekstu</h1>
+    </header>
+    
+    <main>
+        <dl>
+            <dt>
+                <small>small</small>
+            </dt>
+            <dd>
+                Jest to znacznik służący do pomniejszenia tekstu, będącego częścią większej całości.
+        </dl>
+        
+        <h2>Kod</h2>
+        <pre>
+        <code>
+        1 &lt;p&gt;
+        2    Tekst na stronie
+        3     &lt;small&gt;
+        4    Mniejszy tekst
+        5 &lt;/small&gt;
+        6    Dalszy ciąg tekstu na stronie
+        7 &lt;/p&gt;    
+        </code>
+        </pre> 
+        <h2>Domyślny styl</h2>
+        <pre>
+        <code>
+        small{
+            font-size: smaller;
+        }
+        </code>
+        </pre>
+        <hr>
+        <dl>
+            <dt>
+                <em>em</em>
+            </dt>
+            <dd>
+                Jest to znacznik służący do wyróżnienia tekstu, będącego częścią większej całości. Domyślnie jest pisany kursywą.
+        </dl>
+        
+        <h2>Kod</h2>
+        <pre>
+        <code>
+        1 &lt;p&gt;
+        2   Tekst na stronie
+        3   &lt;em&gt;
+        4       Wyróżniony tekst
+        5   &lt;/em&gt;
+        6   Dalszy ciąg tekstu na stronie
+        7 &lt;/p&gt;    
+        </code>
+        </pre> 
+        <h2>Domyślny styl</h2>
+        <pre>
+        <code>
+        em{
+            font-style: italic;
+        }
+        </code>
+        </pre>
+        <hr>
+        <dl>
+            <dt>
+                <strong>strong</strong>
+            </dt>
+            <dd>
+                Jest to znacznik służący do wyróżnienia tekstu o dużym znaczeniu, będącego częścią większej całości. Domyślnie jest wyświetlany pogrubioną czcionką.
+        </dl>
+        
+        <h2>Kod</h2>
+        <pre>
+        <code>
+        1 &lt;p&gt;
+        2   Tekst na stronie
+        3   &lt;strong&gt;
+        4       Wyróżniony tekst
+        5   &lt;/strong&gt;
+        6   Dalszy ciąg tekstu na stronie
+        7 &lt;/p&gt;    
+        </code>
+        </pre> 
+        <h2>Domyślny styl</h2>
+        <pre>
+        <code>
+        strong {
+            font-weight: bold;
+        }
+        </code>
+        </pre>
+        <hr>
+        <dl>
+            <dt>
+                <i>i</i>
+            </dt>
+            <dd>
+                Jest to znacznik służący do wyróżnienia tekstu, będącego częścią większej całości. Domyślnie jest pisany kursywą.
+        </dl>
+        
+        <h2>Kod</h2>
+        <pre>
+        <code>
+        1 &lt;p&gt;
+        2   Tekst na stronie
+        3   &lt;i&gt;
+        4       Wyróżniony tekst
+        5   &lt;/i&gt;
+        6   Dalszy ciąg tekstu na stronie
+        7 &lt;/p&gt;    
+        </code>
+        </pre> 
+        <h2>Domyślny styl</h2>
+        <pre>
+        <code>
+        i{
+            font-style: italic;
+        }
+        </code>
+        </pre>
+        <hr>
+        <hr>
+        <dl>
+            <dt>
+                <b>b</b>
+            </dt>
+            <dd>
+                Służy do pogrubienia tekstu.
+        </dl>
+        
+        <h2>Kod</h2>
+        <pre>
+        <code>
+        1 &lt;p&gt;
+        2   Tekst na stronie
+        3   &lt;b&gt;
+        4       Pogrubiony tekst
+        5   &lt;/b&gt;
+        6   Dalszy ciąg tekstu na stronie
+        7 &lt;/p&gt;    
+        </code>
+        </pre> 
+        <h2>Domyślny styl</h2>
+        <pre>
+        <code>
+        b{
+            font-weight: bold;
+        }
+        </code>
+        </pre>
+        <hr>
+        <hr>
+        <dl>
+            <dt>
+                <ins>ins</ins>
+            </dt>
+            <dd>
+                Służy do podkreślenia tekstu.
+        </dl>
+        
+        <h2>Kod</h2>
+        <pre>
+        <code>
+        1 &lt;p&gt;
+        2   Tekst na stronie
+        3   &lt;ins&gt;
+        4       Podkreślony tekst
+        5   &lt;/ins&gt;
+        6   Dalszy ciąg tekstu na stronie
+        7 &lt;/p&gt;    
+        </code>
+        </pre> 
+        <h2>Domyślny styl</h2>
+        <pre>
+        <code>
+        ins{
+            text-decoration: underline;
+        }
+        </code>
+        </pre>
+        <hr>
+        <dl>
+            <dt>
+                <del>del</del>
+            </dt>
+            <dd>
+                Jest to znacznik służący do zaznaczenia usuniętego tekstu. Domyślnie jest wyświetlany przekreślony.
+        </dl>
+        
+        <h2>Kod</h2>
+        <pre>
+        <code>
+        1 &lt;p&gt;
+        2   Tekst na stronie
+        3   &lt;del&gt;
+        4       Usunięty tekst
+        5   &lt;/del&gt;
+        6   Dalszy ciąg tekstu na stronie
+        7 &lt;/p&gt;    
+        </code>
+        </pre> 
+        <h2>Domyślny styl</h2>
+        <pre>
+        <code>
+        del {
+            text-decoration: line-through;
+        }
+        </code>
+        </pre>
+        <hr>
+        <dl>
+            <dt>
+                <cite>cite</cite>
+            </dt>
+            <dd>
+                Jest to znacznik, w którym pisze się cytaty, będące tytułami jakiegoś dzieła, np. książki. Domyślnie jest pisany kursywą.
+        </dl>
+        
+        <h2>Kod</h2>
+        <pre>
+        <code>
+        1 &lt;cite&gt;
+        2   Tytuł dzieła
+        3 &lt;/cite&gt;    
+        </code>
+        </pre> 
+        <h2>Domyślny styl</h2>
+        <pre>
+        <code>
+        cite {
+            font-style: italic;
+        }
+        </code>
+        </pre>
+        <hr>
+        <dl>
+            <dt>
+                <blockquote>blockquote</blockquote>
+            </dt>
+            <dd>
+                Jest to znacznik, który zaznacza tekst cytowany z innego źródła.
+        </dl>
+        
+        <h2>Kod</h2>
+        <pre>
+        <code>
+        1 &lt;blockquote&gt;
+        2   Tekst z innego źródła
+        3 &lt;/blockquote&gt;    
+        </code>
+        </pre> 
+        <h2>Domyślny styl</h2>
+        <pre>
+        <code>
+        blockquote{
+            display: block;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        </code>
+        </pre>
+        <hr>
+        <dl>
+            <dt>
+                <q>q</q>
+            </dt>
+            <dd>
+                Jest to znacznik, w którym pisze się krótkie cytaty. Domyślnie jest wyświetlany w cudzysłowach.
+        </dl>
+        
+        <h2>Kod</h2>
+        <pre>
+        <code>
+        1 &lt;p&gt;
+        2    Tekst na stronie
+        3    &lt;q&gt;
+        4       Krótki cytat
+        5    &lt;/q&gt;
+        6    Dalszy ciąg tekstu na stronie
+        7 &lt;/p&gt;    
+        </code>
+        </pre> 
+        <h2>Domyślny styl</h2>
+        <pre>
+        <code>
+        cite {
+            font-style: italic;
+        }
+        </code>
+        </pre>
+    </main>
+    <footer>
+        <p>Autor strony: Natalia Lodzińska</p>
+    </footer>
+    
+</body>
+</html>

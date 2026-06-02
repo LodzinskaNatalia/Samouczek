@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selektory</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            background-color: antiquewhite;
+            width: 100%;
+            height: 100vh;
+        }
+
+        header{
+            position: relative;
+            display: flex;
+            background-color: #FAD88E;
+            font-size: 150%;
+            padding: 2.5%;
+            box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.418);
+            border-bottom-right-radius: 5%;
+            border-bottom-left-radius: 5%;
+            margin-bottom: 2%;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        h1{
+            position: relative;
+            animation: h1 3s;
+        }
+        @keyframes h1{
+            from{
+                right: 40%;
+                opacity: 0;
+            }
+            to{
+                right: 0;
+                opacity: 1;
+            }
+        }
+        img{
+            position: relative;      
+           
+        }
+        .img{
+            display: flex;
+            justify-content: center;
+            margin: 2%;
+        }
+        
+        dt, h2{
+            font-size: 200%;
+            font-weight: bold;
+            margin: 2%;
+        }
+        dd, ol{
+            font-size: 150%;
+            margin: 2%;
+        }
+        li{
+            margin-left: 2%;
+            font-size: 125%;
+            margin-bottom: 1%;
+            
+        }
+        
+        pre{
+            font-size: 150%;
+            background-color: lightgray;            
+            margin: 2%;            
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.418);
+        }
+        main{
+            flex: 1;
+        }
+        footer{
+            
+            background-color: #FAD88E;
+            padding: 0.5%;
+            box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.418);
+            border-top-left-radius: 10%;
+            border-top-right-radius: 10%;
+            text-align: center;
+            width: 100%;
+          
+        }
+        header img{
+            position: absolute;
+            left: 2%;
+            top: 50%;
+            transform: translateY(-50%)
+            
+        }
+        table, th, tr, td{
+            border: 1px solid black;
+            text-align: center;
+            font-size: 120%;
+            
+        }
+        th{
+            background-color: #FAD88E;
+        }
+        td{
+            padding: 1%;
+        }
+        tr{
+            background-color: blanchedalmond;
+        }
+        .table{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2%;
+        }
+        @media screen and (max-width: 780px) {
+            header a{
+                display: none;
+            }
+            pre{
+                overflow: auto; 
+            }
+            img{
+                display: none;
+            }
+            
+        }
+    </style>
+</head>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="img/Domek.png"></a>
+        <h1>Selektory</h1>
+    </header>
+    <main>
+        <dl>
+        <dt>Selektory</dt> 
+        <dd>służą do wyboru elementu w css.</dd>
+        </dl>
+        <h2>Przykładowe selektory:</h2>
+        <div class="table">
+        <table>
+            <tr>
+                <th>Selektor</th><th>Opis</th>
+            </tr>
+            <tr>
+                <td>.class</td><td>Selektor klasy, poprzedza się go kropką.</td>
+            </tr>
+            <tr>
+                <td>#id</td><td>Identyfikator, może być przypisany tylko do jednego elementu, poprzedza się go znakiem #.</td>
+            </tr>
+            <tr>
+                <td>*</td><td>Selektor uniwersalny</td>
+            </tr>
+            <tr>
+                <td>p</td><td>Znacznik</td>
+            </tr>
+            <tr>
+                <td>div, p</td><td>Można urzyć selektora dla dwóch różnych znaczników</td>
+            </tr>
+            <tr>
+                <td>div>p</td><td>Selektor dziecka</td>
+            </tr>
+            <tr>
+                <td>div p</td><td>Selektor potomka</td>
+            </tr>
+            <tr>
+                <td>div.class</td><td>Wybiera podne elementy, zawierające podaną klasę.</td>
+            </tr>
+            <tr>
+                <td>a:hover</td><td>Wybiera elementy, na które najechało się kursorem myszy</td>
+            </tr>
+        </table>
+    </main>
+   <footer>
+        <p>Autor strony: Natalia Lodzińska</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struktura</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            background-color: #faebd7;
+            width: 100%;
+            height: 100%;
+            min-height: 100vh;
+        }
+
+        header{
+            position: relative;
+            display: flex;
+            background-color: #FAD88E;
+            font-size: 150%;
+            padding: 2.5%;
+            box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.418);
+            border-bottom-right-radius: 5%;
+            border-bottom-left-radius: 5%;
+            margin-bottom: 2%;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        h1{
+            position: relative;
+            animation: h1 3s;
+        }
+        @keyframes h1{
+            from{
+                right: 40%;
+                opacity: 0;
+            }
+            to{
+                right: 0;
+                opacity: 1;
+            }
+        }
+        .img{
+            display: flex;
+            justify-content: center;
+        }
+        
+        dt, h2{
+            font-size: 200%;
+            font-weight: bold;
+            margin: 2%;
+        }
+        dd, ol{
+            font-size: 150%;
+            margin: 2%;
+        }
+        ol{
+            list-style-position: inside;
+        }
+        li{
+            margin-left: 2%;
+            font-size: 125%;
+            margin-bottom: 1%;
+            
+        }
+        pre{
+            font-size: 150%;
+            background-color: lightgray;            
+            margin: 2%;            
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.418);
+        }
+        main{
+            flex: 1;
+        }
+        footer{
+            
+            background-color: #FAD88E;
+            padding: 0.5%;
+            box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.418);
+            border-top-left-radius: 10%;
+            border-top-right-radius: 10%;
+            text-align: center;
+            width: 100%;
+          
+        }
+        header img{
+            position: absolute;
+            left: 2%;
+            top: 50%;
+            transform: translateY(-50%)
+            
+        }
+        @media screen and (max-width: 780px) {
+            header a{
+                display: none;
+            }
+            pre{
+                overflow: auto; 
+            }
+            img{
+                display: none;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="img/Domek.png"></a>
+        <h1>Struktura strony</h1>
+    </header>
+    <main>
+        <dl>
+            <dt>
+                Struktura strony
+            </dt>
+            <dd>
+                Schemat w jaki sposób powinno tworzyć się stronę.
+        </dl>
+             
+        <h2>Kod</h2>
+        <pre>
+        <code>
+        1 &lt;!DOCTYPE html&gt;
+        2 &lt;html lang="pl"&gt;
+        3 &lt;head&gt;
+        4    &lt;meta charset="UTF-8"&gt;
+        5    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        6    &lt;title&gt;Struktura&lt;title&gt;
+        7 &lt;/head&gt;
+        8 &lt;body&gt;
+        9    &lt;header&gt;&lt;/header&gt;
+        10   &lt;main&gt;&lt;/main&gt;
+        11   &lt;footer&gt;&lt;/footer&gt;
+        12 &lt;/body&gt;
+        </code>
+        </pre>
+        <h2>Jak to działa?</h2>
+        <ol>
+            <li>
+                Informujemy o wersji języka html.
+            </li>
+            <li>
+                Deklarujemy jaki język przeważa na stornie. Na tej stronie jest to język polski.
+            </li>
+            <li>
+                Otwieramy znacznik &lt;head&gt;, w którym będą podstawowe informacje o stronie.
+            </li>
+            <li>Informujemy, że system kodowania strony to UTF-8</li>
+            <li>
+                Ta linijka jest niezbędna do stworzenia responsywnej strony internetowej. Można dodać kolejną z atrybutem "name" i "content", np. informującą o autorze strony.
+            </li>
+            <li>
+                Podajemy tytuł strony, który będzie wyświetlał się w przeglądarce.
+            </li>
+            <li>
+                Zamykamy &lt;head&gt;.
+            </li>
+            <li>
+                Otwieramy znacznik &lt;body&gt;, w którym będzie cała zawartość  strony.
+            </li>
+            <li>
+                W znaczniku &lt;header&gt; znajduje się nagłówek.
+            </li>
+            <li>
+                &lt;main&gt; to główna zawartość strony. Można wewnątrz maina dodać &lt;nav&gt;, w którym znajduje się manu, oraz &lt;article&gt; i &lt;section&gt;. Można dodawać także zanczniki &lt;div&gt;, jednak gdy jest to możliwe powinno unikać się ich używania.          
+            </li>
+            <li>
+                W tagu &lt;footer&gt; znajduje się stopka.
+            </li>
+            <li>
+                Na końcu zamykamy &lt;body&gt; 
+            </li>
+        </ol>
+    </main>
+    <footer>
+        <p>Autor strony: Natalia Lodzińska</p>
+    </footer>
+    
+</body>
+</html>

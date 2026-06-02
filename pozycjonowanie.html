@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podstawy</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            background-color: #faebd7;
+            width: 100%;
+            height: 100%;
+            min-height: 100vh;
+        }
+
+        header{
+            position: relative;
+            display: flex;
+            background-color: #FAD88E;
+            font-size: 150%;
+            padding: 2.5%;
+            box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.418);
+            border-bottom-right-radius: 5%;
+            border-bottom-left-radius: 5%;
+            margin-bottom: 2%;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        h1{
+            position: relative;
+            animation: h1 3s;
+        }
+        @keyframes h1{
+            from{
+                right: 40%;
+                opacity: 0;
+            }
+            to{
+                right: 0;
+                opacity: 1;
+            }
+        }
+        .img{
+            display: flex;
+            justify-content: center;
+        }
+        
+        dt, h2{
+            font-size: 200%;
+            font-weight: bold;
+            margin: 2%;
+        }
+        dd,ul,.p{
+            font-size: 150%;
+            margin: 2%;
+        }
+        ul{
+            list-style-position: inside;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding-left: 0;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        ul li{
+            width: 30%;
+            background-color: lightgray;
+            padding: 8px 12px;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.418);
+            margin: 0.5%;
+            text-align: center;
+            
+        }
+        pre{
+            font-size: 150%;
+            background-color: lightgray;            
+            margin: 2%;            
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.418);
+        }
+        main{
+            flex: 1;
+        }
+        footer{
+            
+            background-color: #FAD88E;
+            padding: 0.5%;
+            box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.418);
+            border-top-left-radius: 10%;
+            border-top-right-radius: 10%;
+            text-align: center;
+            width: 100%;
+          
+        }
+        header img{
+            position: absolute;
+            left: 2%;
+            top: 50%;
+            transform: translateY(-50%)
+            
+        }
+        h3{
+            width: 100%;
+            font-weight: 80%;
+            font-size: 80%;
+        }
+        @media screen and (max-width: 780px) {
+            header a{
+                display: none;
+            }
+            pre{
+                overflow: auto; 
+            }
+            img{
+                display: none;
+            }
+            ul li{
+                width: 90%;
+                margin-bottom: 2.5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="img/Domek.png"></a>
+        <h1>Pozycjonowanie</h1>
+    </header>
+    <main>
+        <p class="p">Pozycjonować można na trzy sposoby: za pomocą float-ów, grid-ów i flexbox-ów.</p>
+        <hr>
+        <h2>Float</h2>
+        <h2>Kod</h2>
+        <pre>
+        <code>
+        float: left\right\none;
+        clear: both</code>
+        </pre>
+        <h2>Jak to działa?</h2>
+        <p class="p">Element zostanie przesunięty najbardziej jak się da w lewo lub w prawo. Clear: both sprawia, że element nie może być w tej samej linijce co drugi element.</p>
+    <hr>
+        <h2>Flexbox</h2>
+        <p class="p">Żeby pozycjoować za pomocą flexbox-ów trzeba stawić na elemęcie "display: flex;" </p>
+        <ul> <h3>flex-direction</h3>
+            <li>row</li>
+            <li>row-reverse</li>
+            <li>column</li>
+            <li>column-reverse</li>            
+        </ul>
+        <hr>
+        <ul> <h3>align-items</h3>
+            <li>flex-start</li>
+            <li>flex-end</li>
+            <li>center</li>
+            <li>stretch</li>      
+            <li>baseline</li>      
+        </ul>
+        <hr>
+        <ul> <h3>justify-content</h3>
+            <li>flex-start</li>
+            <li>flex-end</li>
+            <li>space-between</li>
+            <li>space-around</li>      
+            <li>space-evenly</li>      
+        </ul>
+        <hr>
+        <ul> <h3>flex-wrap</h3>
+            <li>nowrap</li>
+            <li>wrap</li>    
+        </ul>
+        <hr>
+        <h2>Grid</h2>
+        <p class="p">Stosuje dwuwymiarowy układ siatki. Żeby pozycjonować elementy za pomocą gridów trzeba ustawic na elemęcie "display: grid;". </p>
+        <ul>
+            <li>grid-template-columns – określa liczbę i szerokość kolumn</li>
+            <li>grid-template-rows – określa liczbę i wysokość wierszy</li>
+            <li>gap - określa rozmiar przerwy pomiędzy elementami</li>
+        </ul>
+
+    <hr>
+    </main>
+    <footer>
+        <p>Autor strony: Natalia Lodzińska</p>
+    </footer>
+    
+</body>
+</html>
