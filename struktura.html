@@ -101,9 +101,111 @@
             transform: translateY(-50%)
             
         }
-        @media screen and (max-width: 780px) {
-            header a{
+       
+.burger-menu {
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    width: 30px;
+    height: 22px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.burger-menu::before,
+.burger-menu::after,
+.burger-menu span {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: black;
+    transition: 0.3s;
+}
+
+/* górna kreska */
+.burger-menu::before {
+    top: 0;
+}
+
+/* środkowa kreska */
+.burger-menu span {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* dolna kreska */
+.burger-menu::after {
+    bottom: 0;
+}
+
+/* MENU */
+
+.main-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100vh;
+    background: #FAD88E;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    padding-top: 80px;
+    overflow: scroll;
+}
+
+.main-nav.active {
+    display: block;
+}
+
+/* LISTA */
+
+.nav-list {
+    list-style: none;
+    padding: 20px;
+}
+
+.nav-list li {
+    margin: 15px 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* IKONA X */
+
+.burger-menu.active::before {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.burger-menu.active::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+}
+
+.burger-menu.active span {
+    opacity: 0;
+}
+
+/* TELEFON */
+
+
+@media screen and (max-width: 780px) {
+                .main-nav {
+        width: 100%;
+            }        
+    header a img{
                 display: none;
+            }
+            .burger-menu.active {
+                right: 50px;
             }
             pre{
                 overflow: auto; 
@@ -119,6 +221,41 @@
     <header>
         <a href="index.html"><img src="img/Domek.png"></a>
         <h1>Struktura strony</h1>
+    
+        <div class="burger-menu">
+            <span></span>
+        </div>
+        <div class="menu">
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li class="list__item"><a href="index.html">Strona główna</a></li>
+                <li class="list__item"><a href="html.html">Html</a></li>
+                <li class="list__item"><a href="struktura.html">Struktura tworzenia stron</a></li>
+                <li class="list__item"><a href="akapit.html">Akapity</a></li>
+                <li class="list__item"><a href="tekst.html">Podstawowe tagi</a></li>
+                <li class="list__item"><a href="indeksy.html">indeksy górne i dolne</a></li>
+                <li class="list__item"><a href="pre_code.html">Tagi &lt;pre&gt; i &lt;code&gt;</a></li>
+                <li class="list__item"><a href="a.html">Hiperłącza</a></li>
+                <li class="list__item"><a href="img.html">Obrazy</a></li>
+                <li class="list__item"><a href="definicje.html">Definicje</a></li>
+                <li class="list__item"><a href="listy.html">Listy</a></li>
+                <li class="list__item"><a href="tabele.html">Tabele</a></li>
+                <li class="list__item"><a href="formularze.html">Formularze</a></li>
+                <li class="list__item"><a href="mapy.html">Mapy odsyłaczy</a></li>
+                <li class="list__item"><a href="animacje.html">Animacje</a></li>
+                <li class="list__item"><a href="css.html">Css</a></li>
+                <li class="list__item"><a href="css_wprowadzenie.html">Wprowadzenie do css</a></li>
+                <li class="list__item"><a href="selektory_css.html">Selektory</a></li>
+                <li class="list__item"><a href="jednostki.html">Jednostki</a></li>
+                <li class="list__item"><a href="podstawy_css.html">Podstawy css-a</a></li>
+                <li class="list__item"><a href="tekst_css.html">Formatowanie tekstu</a></li>
+                <li class="list__item"><a href="border_css.html">Border</a></li>
+                <li class="list__item"><a href="position_css.html">Position</a></li>
+                <li class="list__item"><a href="pozycjonowanie.html">Pozycjonowanie</a></li>
+                <li class="list__item"><a href="responsywnosc_css.html">Responsywność</a></li>
+            </ul>
+        </nav>
+        </div>
     </header>
     <main>
         <dl>
@@ -187,6 +324,7 @@
     <footer>
         <p>Autor strony: Natalia Lodzińska</p>
     </footer>
+    <script> const burger = document.querySelector(".burger-menu"); const nav = document.querySelector(".main-nav"); burger.addEventListener("click", () => { burger.classList.toggle("active"); nav.classList.toggle("active"); }); </script>
     
 </body>
 </html>
